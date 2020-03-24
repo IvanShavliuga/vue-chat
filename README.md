@@ -1,7 +1,7 @@
 # Chat by Vue + Webpack
 
 
-<img width="600" src="https://github.com/IvanShavliuga/vue-chat/blob/master/intro.jpg">
+<img width="600" src="https://github.com/IvanShavliuga/vue-chat/blob/master/intro.png">
 
 ## Build Setup
 
