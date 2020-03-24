@@ -36,11 +36,22 @@ const store = new Vuex.Store({
                     img: 'dist/images/3.jpg'
                 },
                 messages: []
+            },
+            {
+                id: 3,
+                user: {
+                    name: 'Web.agent',
+                    img: 'dist/images/2.png'
+                },
+                messages: [
+                    {
+                        content: 'This is test?',
+                        date: now
+                    }
+                ]
             }
         ],
-        // 当前选中的会话
         currentSessionId: 1,
-        // 过滤出只包含这个key的会话
         filterKey: ''
     },
     mutations: {
@@ -50,7 +61,6 @@ const store = new Vuex.Store({
                 state.sessions = JSON.parse(data);
             }
         },
-        // 发送消息
         sendMessage({sessions, currentSessionId}, content) {
             let session = sessions.find(item => item.id === currentSessionId);
             session.messages.push({
@@ -59,19 +69,15 @@ const store = new Vuex.Store({
                 self: true
             });
         },
-        // 选择会话
         selectSession(state, id) {
             state.currentSessionId = id;
         },
-        // 搜索
         setFilterKey(state, value) {
             state.filterKey = value;
         }
     },
     getters: {
-        // 当前会话 session
         session: ({sessions, currentSessionId}) => sessions.find(session => session.id === currentSessionId),
-        // 过滤后的会话列表
         filteredSessions: ({sessions, filterKey}) => {
             let result = sessions.filter(session => session.user.name.includes(filterKey));
             return result;
