@@ -11,10 +11,10 @@ import Message from 'components/message';
         components: {Card, List, TextInput, Message},
         methods: mapMutations([
             'initData',
-        ]),
+        ])/*,
         created() {
             this.initData();
-        }
+        }*/
     };
 </script>
 

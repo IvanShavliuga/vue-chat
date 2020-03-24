@@ -40,7 +40,7 @@
             vertical-align: middle;
         }
         .avatar {
-            border-radius: 2px;
+            border-radius: 50%;
         }
         .name {
             display: inline-block;

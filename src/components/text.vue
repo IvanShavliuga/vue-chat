@@ -29,8 +29,8 @@
 
 <style lang="less" scoped>
     .text {
-        height: 160px;
-        border-top: solid 1px #ddd;
+        height: 100px;
+        border-top: solid 2px #eee;
         textarea {
             padding: 10px;
             height: 100%;

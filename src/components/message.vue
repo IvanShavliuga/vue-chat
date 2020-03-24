@@ -50,7 +50,6 @@
 <style lang="less" scoped>
     .message {
         padding: 10px 15px;
-        overflow-y: scroll;
         li {
             margin-bottom: 15px;
         }
@@ -60,16 +59,18 @@
             > span {
                 display: inline-block;
                 padding: 0 18px;
-                font-size: 12px;
-                color: #fff;
-                border-radius: 2px;
-                background-color: #dcdcdc;
+                font-size: 15px;
+                font-weight: bold;
+                color: #fef;
+                border-radius: 18px;
+                background-color: #ccc;
             }
         }
         .avatar {
             float: left;
             margin: 0 10px 0 0;
-            border-radius: 3px;
+            border-radius: 50%;
+            
         }
         .text {
             display: inline-block;
@@ -82,7 +83,7 @@
             text-align: left;
             word-break: break-all;
             background-color: #fafafa;
-            border-radius: 4px;
+            border-radius: 12px;
             &:before {
                 content: " ";
                 position: absolute;

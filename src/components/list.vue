@@ -37,14 +37,15 @@
                 background-color: rgba(255, 255, 255, 0.03);
             }
             &.active {
-                background-color: rgba(255, 255, 255, 0.1);
+                background-color: rgba(255, 0, 255, 0.1);
+                color:#f0f;
             }
         }
         .avatar, .name {
             vertical-align: middle;
         }
         .avatar {
-            border-radius: 2px;
+            border-radius: 50%;
         }
         .name {
             display: inline-block;
