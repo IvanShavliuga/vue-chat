@@ -1,20 +1,21 @@
 <script>
 import { actions } from './store';
+import {mapMutations} from 'vuex';
 
 import Card from 'components/card';
 import List from 'components/list';
-import Text from 'components/text';
+import TextInput from 'components/text';
 import Message from 'components/message';
 
-export default {
-    components: { Card, List, Text, Message },
-    vuex: {
-        actions: actions
-    },
-    created () {
-        this.initData();
-    }
-}
+    export default {
+        components: {Card, List, TextInput, Message},
+        methods: mapMutations([
+            'initData',
+        ]),
+        created() {
+            this.initData();
+        }
+    };
 </script>
 
 <template>
@@ -25,7 +26,7 @@ export default {
     </div>
     <div class="main">
         <message></message>
-        <text></text>
+        <text-input></text-input>
     </div>
 </div>
 </template>
