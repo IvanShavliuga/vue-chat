@@ -6,12 +6,12 @@ Vue.use(Vuex);
 const now = new Date();
 const store = new Vuex.Store({
     state: {
-        // 当前用户
+        
         user: {
             name: 'iv2',
             img: 'dist/images/1.jpg'
         },
-        // 会话列表
+        
         sessions: [
             {
                 id: 1,
@@ -46,6 +46,32 @@ const store = new Vuex.Store({
                 messages: [
                     {
                         content: 'This is test?',
+                        date: now
+                    }
+                ]
+            },
+            {
+                id: 4,
+                user: {
+                    name: 'Ann',
+                    img: 'dist/images/2.png'
+                },
+                messages: [
+                    {
+                        content: 'Test string',
+                        date: now
+                    }
+                ]
+            },
+            {
+                id: 5,
+                user: {
+                    name: 'Angel',
+                    img: 'dist/images/2.png'
+                },
+                messages: [
+                    {
+                        content: 'Test string',
                         date: now
                     }
                 ]
