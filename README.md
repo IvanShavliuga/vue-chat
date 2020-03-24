@@ -1,8 +1,7 @@
 # Chat by Vue + Webpack
 
-[Live demo](http://coffcer.github.io/vue-chat/)
 
-<img width="600" src="https://github.com/Coffcer/vue-chat/blob/master/intro.jpg">
+<img width="600" src="https://github.com/IvanShavliuga/vue-chat/blob/master/intro.jpg">
 
 ## Build Setup
 
@@ -16,3 +15,11 @@ npm run dev
 # build for production with minification
 npm run build
 ```
+
+## Updated to version 2.0.0
+
+update Vue
+
+update Less
+
+create English version
