@@ -2,7 +2,6 @@
     import {mapGetters, mapState} from 'vuex';
     export default {
         computed: {
-            // 使用 (...) 对象展开运算符将 getter 以及 state 混入 computed 对象中
             ...mapGetters([
                 'session'
             ]),
@@ -11,7 +10,6 @@
             ])
         },
         filters: {
-            // 将日期过滤为 hour:minutes
             time(date) {
                 if (typeof date === 'string') {
                     date = new Date(date);
@@ -20,9 +18,7 @@
             }
         },
         directives: {
-            // 发送消息后滚动到底部
             'scroll-bottom': {
-                // 在当前组件及其子组件更新完成后调用
                 componentUpdated: function (el, binding, vnode) {
                     el.scrollTop = el.scrollHeight - el.clientHeight;
                 }
@@ -61,7 +57,7 @@
                 padding: 0 18px;
                 font-size: 15px;
                 font-weight: bold;
-                color: #fef;
+                color: #fff;
                 border-radius: 18px;
                 background-color: #ccc;
             }

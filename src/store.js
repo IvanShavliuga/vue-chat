@@ -49,6 +49,32 @@ const store = new Vuex.Store({
                         date: now
                     }
                 ]
+            },
+            {
+                id: 4,
+                user: {
+                    name: 'Ann',
+                    img: 'dist/images/2.png'
+                },
+                messages: [
+                    {
+                        content: 'Test string',
+                        date: now
+                    }
+                ]
+            },
+            {
+                id: 5,
+                user: {
+                    name: 'Angel',
+                    img: 'dist/images/2.png'
+                },
+                messages: [
+                    {
+                        content: 'Test string',
+                        date: now
+                    }
+                ]
             }
         ],
         currentSessionId: 1,
