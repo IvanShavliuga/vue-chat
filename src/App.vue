@@ -52,7 +52,8 @@ import Message from 'components/message';
     .main {
         position: relative;
         overflow: hidden;
-        background-color: #eee;
+        background: url('/dist/images/background.JPG');
+        background-size: cover;
     }
     .text {
         position: absolute;
