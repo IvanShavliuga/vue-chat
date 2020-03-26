@@ -45,7 +45,10 @@
 
 <style lang="less" scoped>
     .message {
-        padding: 10px 15px;
+        overflow: scroll;
+        overflow-x: hidden;
+        overflow-y: auto;
+        
         li {
             margin-bottom: 15px;
         }

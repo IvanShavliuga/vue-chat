@@ -13,7 +13,6 @@
                     this.content = '';
                 }
             },
-            // (...) 对象展开运算符
             ...mapMutations([
                 'sendMessage'
             ])
@@ -29,7 +28,7 @@
 
 <style lang="less" scoped>
     .text {
-        height: 100px;
+        height: 160px;
         border-top: solid 2px #eee;
         textarea {
             padding: 10px;
