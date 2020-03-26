@@ -23,3 +23,5 @@ update Vue
 update Less
 
 create English version
+
+update design (added background)
