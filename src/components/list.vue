@@ -28,6 +28,11 @@
 
 <style scoped lang="less">
     .list {
+        height: 600 - 105px;
+        overflow: scroll;
+        overflow-x: hidden;
+        overflow-y: auto;
+        
         li {
             padding: 12px 15px;
             border-bottom: 1px solid #292C33;
