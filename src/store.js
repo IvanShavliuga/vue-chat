@@ -6,12 +6,10 @@ Vue.use(Vuex);
 const now = new Date();
 const store = new Vuex.Store({
     state: {
-        // 当前用户
         user: {
             name: 'iv2',
             img: 'dist/images/1.jpg'
         },
-        // 会话列表
         sessions: [
             {
                 id: 1,
@@ -24,7 +22,7 @@ const store = new Vuex.Store({
                         content: 'Hello, how you do?',
                         date: now
                     }, {
-                        content: 'My project https://github.com/coffcer/vue-chat',
+                        content: 'My project https://github.com/IvanShavliuga/vue-chat',
                         date: now
                     }
                 ]
