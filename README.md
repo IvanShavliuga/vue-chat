@@ -25,3 +25,7 @@ update Less
 create English version
 
 update design (added background)
+
+added v-html
+
+Now you can add tags in messages
