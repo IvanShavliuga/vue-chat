@@ -29,3 +29,5 @@ update design (added background)
 added v-html
 
 Now you can add tags in messages
+
+Added panel html tags
