@@ -24,6 +24,7 @@
                        this.content.match(/<audio/)||
                        this.content.match(/<video/)||
                        this.content.match(/<iframe/)||
+                       this.content.match(/<button/)||
                        this.content.match(/<script/)) {
                        this.errortext="invalid tag";
                        this.error=true; 
@@ -57,11 +58,11 @@
             <button @click="addelem('pre')" title="code">PRE</button>
             <button @click="addelem('q')" title="quote">Q</button>
             <button @click="addelem('table')" title="table">TABLE</button>
-            <button @click="addelem('tr')" title="quote">TR</button>
-            <button @click="addelem('th')" title="quote">TH</button>
-            <button @click="addelem('td')" title="quote">TD</button>
-            <button @click="addelem('ul')" title="quote">UL</button>
-            <button @click="addelem('li')" title="quote">LI</button>
+            <button @click="addelem('tr')" title="table row">TR</button>
+            <button @click="addelem('th')" title="table row header">TH</button>
+            <button @click="addelem('td')" title="table cell">TD</button>
+            <button @click="addelem('ul')" title="unsorted list">UL</button>
+            <button @click="addelem('li')" title="list item">LI</button>
             <span class="error" v-if="error"><br>Error: {{errortext}}</span>
         </div>
         <textarea placeholder="Ctrl + Enter" v-model="content" @keyup="onKeyup"></textarea>

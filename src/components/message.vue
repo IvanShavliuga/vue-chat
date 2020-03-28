@@ -90,8 +90,11 @@
                 right: 100%;
                 border: 6px solid transparent;
                 border-right-color: #fafafa;
+                
             }
+           
         }
+        
         .self {
             text-align: right;
             .avatar {
