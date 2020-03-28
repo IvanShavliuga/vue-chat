@@ -3,16 +3,37 @@
     export default {
         data() {
             return {
-                content: ''
+                content: '',
+                error:false,
+                errortext:""
             };
         },
         methods: {
             onKeyup(e) {
-                if (e.ctrlKey && e.keyCode === 13 && this.content.length) {
-                    this.sendMessage(this.content);
-                    this.content = '';
+                if(this.content.length) {
+                    this.error=false;                  
                 }
-                if (e.keyCode === 13 && this.content.length) {
+                if (e.ctrlKey && e.keyCode === 13 && this.content.length) {
+                    if(this.content.match(/<input/)||
+                       this.content.match(/<textarea/)||
+                       this.content.match(/<frame/)||
+                       this.content.match(/<form/)||
+                       this.content.match(/<canvas/)||
+                       this.content.match(/<label/)||
+                       this.content.match(/<image/)||
+                       this.content.match(/<audio/)||
+                       this.content.match(/<video/)||
+                       this.content.match(/<iframe/)||
+                       this.content.match(/<script/)) {
+                       this.errortext="invalid tag";
+                       this.error=true; 
+                       this.content="";                   
+                    }else{
+                       this.sendMessage(this.content);
+                       this.content = '';
+                    }
+                }
+                if (e.keyCode === 13 && this.content.length && !this.error) {
                     this.content = this.content+'<br>';
                 }
             },
@@ -35,6 +56,13 @@
             <button @click="addelem('a')" title="link">A</button>
             <button @click="addelem('pre')" title="code">PRE</button>
             <button @click="addelem('q')" title="quote">Q</button>
+            <button @click="addelem('table')" title="table">TABLE</button>
+            <button @click="addelem('tr')" title="quote">TR</button>
+            <button @click="addelem('th')" title="quote">TH</button>
+            <button @click="addelem('td')" title="quote">TD</button>
+            <button @click="addelem('ul')" title="quote">UL</button>
+            <button @click="addelem('li')" title="quote">LI</button>
+            <span class="error" v-if="error"><br>Error: {{errortext}}</span>
         </div>
         <textarea placeholder="Ctrl + Enter" v-model="content" @keyup="onKeyup"></textarea>
     </div>
@@ -54,6 +82,7 @@
             font-size: 14px;
             resize: none;
         }
+        
         .menubar{
           background:#eee;
           padding:4px 10px;
@@ -64,6 +93,12 @@
             background: #ccc;
             border:1px solid #444;
             font-weight: bold;
+          }
+          .error{
+            color:red;
+            font-weight:bold;
+            font-size:16px;
+            margin-left:10px;           
           }        
         }
     }
