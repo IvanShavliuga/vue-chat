@@ -6,9 +6,10 @@ import Card from 'components/card';
 import List from 'components/list';
 import TextInput from 'components/text';
 import Message from 'components/message';
+import Signin from 'components/signin';
 
     export default {
-        components: {Card, List, TextInput, Message},
+        components: {Card, List, TextInput, Message, Signin},
         methods: mapMutations([
             'initData',
         ])/*,
@@ -20,13 +21,15 @@ import Message from 'components/message';
 
 <template>
 <div id="app">
+  
     <div class="sidebar">
         <card></card>
         <list></list>
     </div>
     <div class="main">
+        <signin></signin>
         <message></message>
-        <text-input></text-input>
+        <text-input></text-input>         
     </div>
 </div>
 </template>
