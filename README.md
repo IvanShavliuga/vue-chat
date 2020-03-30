@@ -18,16 +18,12 @@ npm run build
 
 ## Updated to version 2.0.0
 
-update Vue
-
-update Less
-
-create English version
-
-update design (added background)
-
-added v-html
-
-Now you can add tags in messages
-
-Added panel html tags
+```
+# update Vue
+# update Less
+# create English version
+# update design (added background)
+# added v-html
+# Now you can add tags in messages
+# Added panel html tags
+```
