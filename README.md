@@ -28,4 +28,6 @@ update design (added background)
 added v-html
 Now you can add tags in messages
 Added panel html tags
+Added component sign in
+A login form with validation checks is now available
 ```
