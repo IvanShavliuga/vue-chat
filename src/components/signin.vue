@@ -12,8 +12,12 @@
         <div class="page">
              <input type="submit" value="Sign In" @click.prevent="signin({name:username,password:password,status:false})">
         </div>
+
         <p><span>&copy;</span> <a href="https://github.com/IvanShavliuga">Ivan Shavliuga (Ivanov)</a>
         <br><span>&copy;</span> <a href="https://github.com/IvanShavliuga/vue-chat">31/03/2020 MIT Open source code</a></p> 
+
+        <p><span>&copy;</span> <a href="https://github.com/IvanShavliuga">Ivan Shavliuga (Ivanov)</a></p>
+
                         
      </form>               
    </div>
@@ -150,6 +154,7 @@
 }
 
 </style>
+
 <script>
 import {mapState, mapMutations, mapGetters} from 'vuex';
 export default {
@@ -165,3 +170,4 @@ export default {
 }
 
 </script>
+
