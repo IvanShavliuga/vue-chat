@@ -1,6 +1,6 @@
 <script>
 import { actions } from './store';
-import {mapMutations} from 'vuex';
+import {mapMutations,mapGetters,mapState} from 'vuex';
 
 import Card from 'components/card';
 import List from 'components/list';
@@ -10,14 +10,20 @@ import Signin from 'components/signin';
 
     export default {
         components: {Card, List, TextInput, Message, Signin},
-        methods: mapMutations([
-            'initData',
-        ]),
         data() {
             return {
                 signinflag:false            
             }
-        }/*,
+        },
+        computed: {
+            ...mapState([
+                'user',
+            ]),
+            ...mapGetters([
+                'status'
+            ])
+        },
+        /*,
         created() {
             this.initData();
         }*/
@@ -26,15 +32,14 @@ import Signin from 'components/signin';
 
 <template>
 <div id="app">
-    <div class="body" v-if="!signinflag">
+    <div class="body" v-if="!user.status">
         <signin></signin>
     </div>
-    <div class="sidebar" v-else>
+    <div class="sidebar" v-if="user.status">
         <card></card>
         <list></list>
     </div>
-    <div class="main" v-else>
-        
+    <div class="main" v-if="user.status">        
         <message></message>
         <text-input></text-input>         
     </div>
