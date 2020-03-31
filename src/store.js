@@ -8,6 +8,8 @@ const store = new Vuex.Store({
     state: {
         user: {
             name: 'iv2',
+            password:"12345",
+            status:false,
             img: 'dist/images/1.jpg'
         },
         sessions: [
@@ -98,6 +100,14 @@ const store = new Vuex.Store({
         },
         setFilterKey(state, value) {
             state.filterKey = value;
+        },
+        signin(state,usr) {
+        	   console.log(usr.name)
+        	   console.log(usr.password)
+            if(state.user.name===usr.name&&state.user.password===usr.password) {
+                state.user.status=true;	
+                usr.status=true;
+            }        
         }
     },
     getters: {
@@ -105,7 +115,8 @@ const store = new Vuex.Store({
         filteredSessions: ({sessions, filterKey}) => {
             let result = sessions.filter(session => session.user.name.includes(filterKey));
             return result;
-        }
+        },
+        status: ({user}) => user.status
     }
 });
 

@@ -1,24 +1,29 @@
 <template>
 <div class="container">
    <div class="form">           
-     <h2>LOGIN FORM</h2>
+     <h2><span>Vue</span><span>.</span><span>chat</span><span> v2.0</span></h2>
      <form>
         <div class="page">
-             <input type="text" name="" placeholder="user name">
+             <input type="text" name="user" placeholder="user name" v-model="username">
         </div>
         <div class="page">
-             <input type="password" name="" placeholder="password">
+             <input type="password" name="password" placeholder="password" v-model="password">
         </div>                   
         <div class="page">
-             <input type="submit" value="Sign In">
+             <input type="submit" value="Sign In" @click.prevent="signin({name:username,password:password,status:false})">
         </div>
+
+        <p><span>&copy;</span> <a href="https://github.com/IvanShavliuga">Ivan Shavliuga (Ivanov)</a>
+        <br><span>&copy;</span> <a href="https://github.com/IvanShavliuga/vue-chat">31/03/2020 MIT Open source code</a></p> 
+
         <p><span>&copy;</span> <a href="https://github.com/IvanShavliuga">Ivan Shavliuga (Ivanov)</a></p>
+
                         
      </form>               
    </div>
 </div> 
 </template>
-<style lang="less">
+<style lang="less" scoped>
 .body {
     margin:0;
     padding:0;
@@ -33,6 +38,7 @@
     position:relative;
     width:300px;
     margin-top:150px;
+    margin-left:30%;
     height:330px;
     border-radius:40px;
     min-height:100px;
@@ -75,6 +81,17 @@
     color:#ddd;
     letter-spacing:2px;
     font-size:24px;
+}
+.form h2 span:first-child {
+    color:yellow;
+}
+.form h2 span:nth-child(3) {
+    color:blue;
+}
+.form h2 span:last-child{
+    font-size:0.5em;
+    letter-spacing:0;
+    margin-left:5px;
 }
 .form .page {
     width:100%;
@@ -123,6 +140,9 @@
     margin:15%;
     margin-left:-5px;
 }
+.form p:last-child{
+    margin-top:10px;
+}
 .form p a{
     color:#fff;
     text-decoration:none;
@@ -134,3 +154,20 @@
 }
 
 </style>
+
+<script>
+import {mapState, mapMutations, mapGetters} from 'vuex';
+export default {
+    data() {
+        return {
+            username: '',
+            password: ''        
+        }    
+    },
+    methods: mapMutations([
+            'signin'
+        ])
+}
+
+</script>
+
