@@ -6,12 +6,18 @@ import Card from 'components/card';
 import List from 'components/list';
 import TextInput from 'components/text';
 import Message from 'components/message';
+import Signin from 'components/signin';
 
     export default {
-        components: {Card, List, TextInput, Message},
+        components: {Card, List, TextInput, Message, Signin},
         methods: mapMutations([
             'initData',
-        ])/*,
+        ]),
+        data() {
+            return {
+                signinflag:false            
+            }
+        }/*,
         created() {
             this.initData();
         }*/
@@ -20,13 +26,17 @@ import Message from 'components/message';
 
 <template>
 <div id="app">
-    <div class="sidebar">
+    <div class="body" v-if="!signinflag">
+        <signin></signin>
+    </div>
+    <div class="sidebar" v-else>
         <card></card>
         <list></list>
     </div>
-    <div class="main">
+    <div class="main" v-else>
+        
         <message></message>
-        <text-input></text-input>
+        <text-input></text-input>         
     </div>
 </div>
 </template>
