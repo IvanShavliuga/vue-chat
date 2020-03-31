@@ -15,11 +15,7 @@
 
         <p><span>&copy;</span> <a href="https://github.com/IvanShavliuga">Ivan Shavliuga (Ivanov)</a>
         <br><span>&copy;</span> <a href="https://github.com/IvanShavliuga/vue-chat">31/03/2020 MIT Open source code</a></p> 
-
-        <p><span>&copy;</span> <a href="https://github.com/IvanShavliuga">Ivan Shavliuga (Ivanov)</a></p>
-
-                        
-     </form>               
+      </form>               
    </div>
 </div> 
 </template>
