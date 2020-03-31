@@ -1,6 +1,8 @@
 # Chat by Vue + Webpack
 
+## Screens
 
+<img width="600" src="https://github.com/IvanShavliuga/vue-chat/blob/master/Screenshot.png">
 <img width="600" src="https://github.com/IvanShavliuga/vue-chat/blob/master/intro.png">
 
 ## Build Setup
