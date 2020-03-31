@@ -12,7 +12,7 @@
         <div class="page">
              <input type="submit" value="Sign In">
         </div>
-        <p><span>&copy;</span> <a href="http://github.com/IvanShavliuga">Ivan Shavliuga (Ivanov)</a></p>
+        <p><span>&copy;</span> <a href="https://github.com/IvanShavliuga">Ivan Shavliuga (Ivanov)</a></p>
                         
      </form>               
    </div>
