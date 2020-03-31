@@ -27,21 +27,20 @@
 </div> 
 </template>
 <style lang="less">
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
-body {
+.body {
     margin:0;
     padding:0;
     display:flex;
     justify-content:center;
-    /*min-height:100vh;*/
+    min-height:100vh;
     align-elements:center;
-    background:#000;
+    background:transparent;
     font-family:Charm; 
 }
 .container{
     position:relative;
     width:300px;
-    margin-top:20%;
+    margin-top:40%;
     height:430px;
     border-radius:40px;
     min-height:100px;
